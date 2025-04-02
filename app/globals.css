@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+}
+
+.slick-dots li button:before {
+  color: #ec1d25 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ec1d25 !important;
+  opacity: 1 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #ec1d25 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ec1d25;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec1d25;
+}
+
