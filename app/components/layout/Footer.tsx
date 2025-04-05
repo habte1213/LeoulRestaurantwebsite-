@@ -3,9 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  TextField,
-  Button,
-  Link,
   IconButton,
   Divider,
   Stack,
@@ -46,16 +43,16 @@ const FooterTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const FooterLink = styled(Link)(({ theme }) => ({
-  color: "rgba(255, 255, 255, 0.7)",
-  textDecoration: "none",
-  marginBottom: theme.spacing(1),
-  display: "block",
-  transition: "color 0.3s ease",
-  "&:hover": {
-    color: theme.palette.primary.main,
-  },
-}));
+// const FooterLink = styled(Link)(({ theme }) => ({
+//   color: "rgba(255, 255, 255, 0.7)",
+//   textDecoration: "none",
+//   marginBottom: theme.spacing(1),
+//   display: "block",
+//   transition: "color 0.3s ease",
+//   "&:hover": {
+//     color: theme.palette.primary.main,
+//   },
+// }));
 
 const ContactItem = styled(Box)(({ theme }) => ({
   display: "flex",

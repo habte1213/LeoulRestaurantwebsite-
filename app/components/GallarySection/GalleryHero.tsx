@@ -2,7 +2,7 @@
 import { Box, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-const HeroContainer = styled(Box)(({ theme }) => ({
+const HeroContainer = styled(Box) ({
   position: "relative",
   height: "60vh",
   display: "flex",
@@ -19,15 +19,15 @@ const HeroContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "rgba(0, 0, 0, 0.6)",
     zIndex: 1,
   },
-}))
+})
 
-const ContentContainer = styled(Box)(({ theme }) => ({
+const ContentContainer = styled(Box) ({
   position: "relative",
   zIndex: 2,
   textAlign: "center",
   maxWidth: "800px",
   width: "100%",
-}))
+})
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
   fontSize: "4rem",

@@ -58,7 +58,7 @@ export default function ContactInfo() {
     <SectionContainer>
       <Container maxWidth="lg">
         <SectionTitle variant="h2">GET IN TOUCH</SectionTitle>
-        <SectionSubtitle>We'd love to hear from you</SectionSubtitle>
+        <SectionSubtitle>We’d love to hear from you</SectionSubtitle>
 
         <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
           <Box sx={{ width: { xs: "100%", sm: "50%", md: "25%" }, p: 2 }}>

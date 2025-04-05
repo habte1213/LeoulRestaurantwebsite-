@@ -7,12 +7,12 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff",
 }));
 
-const MapContainer = styled(Box)(({ theme }) => ({
+const MapContainer = styled(Box) ({
   height: "500px",
   width: "100%",
   position: "relative",
   overflow: "hidden",
-}));
+});
 
 export default function ContactMap() {
   return (

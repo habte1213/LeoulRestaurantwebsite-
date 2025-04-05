@@ -26,14 +26,14 @@ const SectionSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.h5.fontFamily,
 }))
 
-const MenuCard = styled(Card)(({ theme }) => ({
+const MenuCard = styled(Card) ({
   boxShadow: "none",
   backgroundColor: "transparent",
   transition: "transform 0.3s ease",
   "&:hover": {
     transform: "translateY(-5px)",
   },
-}))
+})
 
 const PriceTag = styled(Box)(({ theme }) => ({
   position: "absolute",

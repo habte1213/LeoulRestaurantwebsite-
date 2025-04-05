@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import type React from "react";
+import Image from "next/image"; // Added Next.js Image component
 
 import {
   Box,
@@ -49,7 +50,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-const GalleryImage = styled(Box)(({ theme }) => ({
+const GalleryImage = styled(Box)({
   position: "relative",
   overflow: "hidden",
   cursor: "pointer",
@@ -77,9 +78,9 @@ const GalleryImage = styled(Box)(({ theme }) => ({
     height: "100%",
     objectFit: "cover",
   },
-}));
+});
 
-const ModalContent = styled(Box)(({ theme }) => ({
+const ModalContent = styled(Box)({
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -87,14 +88,9 @@ const ModalContent = styled(Box)(({ theme }) => ({
   maxWidth: "90vw",
   maxHeight: "90vh",
   outline: "none",
-  "& img": {
-    maxWidth: "100%",
-    maxHeight: "90vh",
-    objectFit: "contain",
-  },
-}));
+});
 
-const CloseButton = styled(IconButton)(({ theme }) => ({
+const CloseButton = styled(IconButton)({
   position: "absolute",
   top: 10,
   right: 10,
@@ -103,7 +99,7 @@ const CloseButton = styled(IconButton)(({ theme }) => ({
   "&:hover": {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
   },
-}));
+});
 
 interface GalleryItem {
   id: number;
@@ -132,11 +128,6 @@ const galleryItems: GalleryItem[] = [
     image: "/asset/Kitfo.jpg",
     category: "food",
   },
- 
-
-
-
-
   // Festivals
   {
     id: 11,
@@ -156,9 +147,7 @@ const galleryItems: GalleryItem[] = [
     image: "/asset/Meskel.jpeg",
     category: "festival",
   },
-
 ];
-
 
 export default function GalleryGrid() {
   const [category, setCategory] = useState("all");
@@ -219,7 +208,6 @@ export default function GalleryGrid() {
           >
             <StyledTab label="ALL" value="all" />
             <StyledTab label="FOOD" value="food" />
-
             <StyledTab label="EVENTS" value="festival" />
           </Tabs>
         </Box>
@@ -228,9 +216,12 @@ export default function GalleryGrid() {
           {filteredItems.map((item) => (
             <ImageListItem key={item.id}>
               <GalleryImage onClick={() => handleOpenModal(item.image)}>
-                <img
+                <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
+                  width={500} // Adjust based on your needs
+                  height={500} // Adjust based on your needs
+                  style={{ objectFit: "cover" }}
                   loading="lazy"
                 />
               </GalleryImage>
@@ -246,7 +237,13 @@ export default function GalleryGrid() {
         aria-describedby="enlarged gallery image"
       >
         <ModalContent>
-          <img src={selectedImage || "/placeholder.svg"} alt="Gallery" />
+          <Image
+            src={selectedImage || "/placeholder.svg"}
+            alt="Gallery"
+            width={800} // Adjust based on your needs
+            height={800} // Adjust based on your needs
+            style={{ objectFit: "contain" }}
+          />
           <CloseButton onClick={handleCloseModal}>
             <Close />
           </CloseButton>

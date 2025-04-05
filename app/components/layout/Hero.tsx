@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const HeroContainer = styled(Box)(({ theme }) => ({
+const HeroContainer = styled(Box) ({
   position: "relative",
   height: "100vh",
   display: "flex",
@@ -22,16 +22,16 @@ const HeroContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     zIndex: 1,
   },
-}));
+});
 
-const ContentContainer = styled(Box)(({ theme }) => ({
+const ContentContainer = styled(Box) ({
   position: "relative",
   zIndex: 2,
   textAlign: "center",
   maxWidth: "800px",
   width: "100%",
   padding: "0 20px", // Add some padding
-}));
+});
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
   fontSize: "5rem",

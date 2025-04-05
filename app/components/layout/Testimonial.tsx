@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
                   <CardContent sx={{ flexGrow: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
                     <QuoteIcon />
                     <Typography variant="body1" sx={{ mb: 3, fontStyle: "italic" }}>
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </Typography>
                     <Rating value={testimonial.rating} readOnly precision={0.5} sx={{ mb: 3 }} />
                     <Avatar src={testimonial.avatar} alt={testimonial.name} sx={{ width: 80, height: 80, mb: 2 }} />

@@ -52,11 +52,11 @@ const FormContainer = styled(Paper)(({ theme }) => ({
   boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
 }))
 
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)  ({
   "& .MuiOutlinedInput-root": {
     borderRadius: 0,
   },
-}))
+})
 
 export default function ReservationForm() {
   const [formData, setFormData] = useState({

@@ -24,7 +24,7 @@ const SectionSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.h5.fontFamily,
 }))
 
-const ChefCard = styled(Card)(({ theme }) => ({
+const ChefCard = styled(Card)(({  }) => ({
   boxShadow: "0 5px 15px rgba(0, 0, 0, 0.08)",
   borderRadius: 0,
   overflow: "hidden",

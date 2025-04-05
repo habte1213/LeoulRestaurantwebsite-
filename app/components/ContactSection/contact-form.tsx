@@ -32,11 +32,11 @@ const FormContainer = styled(Paper)(({ theme }) => ({
   borderRadius: 0,
 }))
 
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)({
   "& .MuiOutlinedInput-root": {
     borderRadius: 0,
   },
-}))
+})
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -88,7 +88,7 @@ export default function ContactForm() {
     <SectionContainer>
       <Container maxWidth="lg">
         <SectionTitle variant="h2">SEND US A MESSAGE</SectionTitle>
-        <SectionSubtitle>We'd love to hear from you</SectionSubtitle>
+        <SectionSubtitle>We’d love to hear from you</SectionSubtitle>
 
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box sx={{ width: { xs: "100%", md: "80%", lg: "70%" } }}>
@@ -175,4 +175,3 @@ export default function ContactForm() {
     </SectionContainer>
   )
 }
-

@@ -25,14 +25,14 @@ const SectionSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.h5.fontFamily,
 }))
 
-const EventCard = styled(Paper)(({ theme }) => ({
+const EventCard = styled(Paper) ({
   overflow: "hidden",
   borderRadius: 0,
   boxShadow: "0 5px 15px rgba(0, 0, 0, 0.08)",
   height: "100%",
   display: "flex",
   flexDirection: "column",
-}))
+})
 
 const EventContent = styled(Box)(({ theme }) => ({
   padding: theme.spacing(3),

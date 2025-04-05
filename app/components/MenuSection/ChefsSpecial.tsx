@@ -24,12 +24,12 @@ const SpecialSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.h5.fontFamily,
 }))
 
-const SpecialCard = styled(Paper)(({ theme }) => ({
+const SpecialCard = styled(Paper) ({
   padding: 0,
   overflow: "hidden",
   boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
   height: "100%",
-}))
+})
 
 const SpecialContent = styled(Box)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -76,9 +76,8 @@ export default function ChefsSpecial() {
   return (
     <SpecialContainer>
       <Container maxWidth="lg">
-        <SpecialTitle variant="h2">CHEF'S SPECIALS</SpecialTitle>
+        <SpecialTitle variant="h2">CHEF’S SPECIALS</SpecialTitle>
         <SpecialSubtitle>Exclusive creations from our master chefs</SpecialSubtitle>
-
         <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
           {specials.map((special) => (
             <Box key={special.id} sx={{ flex: 1 }}>

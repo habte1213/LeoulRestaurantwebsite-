@@ -32,10 +32,10 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   },
 }))
 
-const ContentContainer = styled(Box)(({ theme }) => ({
+const ContentContainer = styled(Box) ({
   position: "relative",
   zIndex: 2,
-}))
+})
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2.5rem",
@@ -60,11 +60,11 @@ const FormContainer = styled(Box)(({ theme }) => ({
   borderRadius: theme.spacing(1),
 }))
 
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField) ({
   "& .MuiOutlinedInput-root": {
     borderRadius: 0,
   },
-}))
+})
 
 export default function ReservationSection() {
   const [time, setTime] = useState("")

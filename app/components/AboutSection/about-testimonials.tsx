@@ -111,7 +111,7 @@ export default function AboutTestimonials() {
               <TestimonialCard>
                 <QuoteIcon />
                 <Typography variant="body1" sx={{ mb: 3, fontStyle: "italic" }}>
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </Typography>
                 <Rating value={testimonial.rating} readOnly precision={0.5} sx={{ mb: 2 }} />
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>

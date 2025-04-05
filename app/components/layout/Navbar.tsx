@@ -11,13 +11,11 @@ import {
   Button,
   MenuItem,
   useScrollTrigger,
-  useMediaQuery,
   Stack,
   Theme,
   SxProps,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
-import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Instagram, Facebook, Twitter } from "@mui/icons-material";
@@ -60,8 +58,6 @@ export default function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const pathname = usePathname();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {

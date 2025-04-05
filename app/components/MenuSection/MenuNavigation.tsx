@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Paper, Stack, Button, Typography } from "@mui/material";
+import { Box, Container,  Stack, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Restaurant, LocalBar, Cake, LocalDining,  } from "@mui/icons-material";
 

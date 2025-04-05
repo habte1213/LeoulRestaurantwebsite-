@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Box, Container, Typography, Button, Paper, useTheme } from "@mui/material"
+import { Box, Container, Typography, Button, Paper } from "@mui/material"
 import { styled } from "@mui/material/styles"
 import { Download } from "@mui/icons-material"
 import QRCode from "react-qr-code"
@@ -55,7 +55,6 @@ interface MenuDownloadProps {
 
 export default function MenuDownload({ menuUrl = "/asset/menu.pdf" }: MenuDownloadProps) {
   const [isClient, setIsClient] = useState(false)
-  const theme = useTheme()
 
   useEffect(() => {
     setIsClient(true)
