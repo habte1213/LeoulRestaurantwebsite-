@@ -1,6 +1,7 @@
-"use client"
-import { Box, Button, Typography, Slide } from "@mui/material"
-import { styled } from "@mui/material/styles"
+"use client";
+import { Box, Button, Typography, Slide } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const HeroContainer = styled(Box)(({ theme }) => ({
@@ -21,7 +22,7 @@ const HeroContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     zIndex: 1,
   },
-}))
+}));
 
 const ContentContainer = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -30,7 +31,7 @@ const ContentContainer = styled(Box)(({ theme }) => ({
   maxWidth: "800px",
   width: "100%",
   padding: "0 20px", // Add some padding
-}))
+}));
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
   fontSize: "5rem",
@@ -41,14 +42,14 @@ const HeroTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     fontSize: "3rem",
   },
-}))
+}));
 
 const HeroSubtitle = styled(Typography)(({ theme }) => ({
   fontSize: "1.5rem",
   fontStyle: "italic",
   marginBottom: theme.spacing(4),
   fontFamily: theme.typography.h5.fontFamily,
-}))
+}));
 
 const HeroButton = styled(Button)(({ theme }) => ({
   backgroundColor: "white",
@@ -57,45 +58,50 @@ const HeroButton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: "white",
   },
-}))
+}));
 
 const slides = [
   {
-    image: '/asset/5.jpg',
-    subtitle: 'Welcome to',
-    title: 'LEOUL BAR & RESTAURANT',
-    buttonText: 'LOOK MENU'
+    image: "/asset/5.jpg",
+    subtitle: "Welcome to",
+    title: "LEOUL BAR & RESTAURANT",
+    buttonText: "LOOK MENU",
+    link: "/menu",
   },
   {
-    image: '/asset/bg-01.jpg',
-    subtitle: 'Experience',
-    title: 'FINE DINING',
-    buttonText: 'RESERVATIONS'
+    image: "/asset/bg-01.jpg",
+    subtitle: "Experience",
+    title: "FINE DINING",
+    buttonText: "RESERVATIONS",
+    link: "/reservation",
   },
   {
-    image: '/asset/bg2.jpg',
-    subtitle: 'Discover',
-    title: 'COCKTAIL BAR',
-    buttonText: 'VIEW DRINKS'
-  }
+    image: "/asset/bg2.jpg",
+    subtitle: "Discover",
+    title: "COCKTAIL BAR",
+    buttonText: "VIEW DRINKS",
+    link: "/menu",
+  },
 ];
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideIn, setSlideIn] = useState(true);
-  const [slideDirection, setSlideDirection] = useState<"left" | "right" | "up" | "down">("right");
+  const [slideDirection, setSlideDirection] = useState<
+    "left" | "right" | "up" | "down"
+  >("right");
 
   // Auto slide transition
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlideDirection('left');
+      setSlideDirection("left");
       setSlideIn(false);
-      
+
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         );
-        setSlideDirection('right');
+        setSlideDirection("right");
         setSlideIn(true);
       }, 500);
     }, 8000); // Change slide every 5 seconds
@@ -111,20 +117,23 @@ export default function Hero() {
         backgroundImage: `url('${currentSlide.image}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        transition: 'background-image 0.5s ease-in-out'
+        transition: "background-image 0.5s ease-in-out",
       }}
     >
       <Slide in={slideIn} direction={slideDirection} timeout={500}>
-        <div> {/* Wrapping div for Slide component */}
+        <div>
+          {/* Wrapping div for Slide component */}
           <ContentContainer>
             <HeroSubtitle variant="h5">{currentSlide.subtitle}</HeroSubtitle>
             <HeroTitle variant="h1">{currentSlide.title}</HeroTitle>
-            <HeroButton variant="contained" color="inherit">
-              {currentSlide.buttonText}
-            </HeroButton>
+            <Link href={currentSlide.link}>
+              <HeroButton variant="contained" color="inherit">
+                {currentSlide.buttonText}
+              </HeroButton>
+            </Link>
           </ContentContainer>
         </div>
       </Slide>
     </HeroContainer>
-  )
+  );
 }

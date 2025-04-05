@@ -74,53 +74,80 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     id: 1,
-    name: "Grilled Salmon",
-    description: "Fresh salmon, asparagus, and herb butter sauce",
-    price: 22.99,
-    image: "/placeholder.svg?height=300&width=400",
-    category: "lunch",
+    name: "Firfir",
+    description: "Injera pieces sautéed in spicy berbere sauce and seasoned butter",
+    price: 110,
+    image: "/asset/img1.jpg", // Replace with actual image path
+    category: "breakfast",
   },
   {
     id: 2,
-    name: "Beef Tenderloin",
-    description: "Premium beef with roasted vegetables and red wine reduction",
-    price: 28.99,
-    image: "/placeholder.svg?height=300&width=400",
-    category: "dinner",
+    name: "Chechebsa",
+    description: "Pan-fried flatbread mixed with spiced butter and berbere",
+    price: 150,
+    image: "/asset/chechebsa.jpg",
+    category: "breakfast",
+  },
+  {
+    id: 5,
+    name: "Enkulal Firfir",
+    description: "Scrambled eggs mixed with sautéed onions, tomatoes, and green peppers",
+    price: 120,
+    image: "/asset/img4.jpg",
+    category: "breakfast",
   },
   {
     id: 3,
-    name: "Vegetable Risotto",
-    description: "Creamy arborio rice with seasonal vegetables and parmesan",
-    price: 18.99,
-    image: "/placeholder.svg?height=300&width=400",
+    name: "Doro Wat",
+    description: "Spicy chicken stew with hard-boiled eggs, served with injera",
+    price: 200,
+    image: "/asset/dorowat1.jpg",
+    category: "lunch",
+  },
+
+
+  {
+    id: 5,
+    name: "Shiro Wat",
+    description: "Rich chickpea stew made with garlic, onions, and berbere",
+    price: 110,
+    image: "/asset/shiro.jpg",
+    category: "lunch",
+  },
+  {
+    id: 8,
+    name: "Atkilt Wot",
+    description: "Mildly spiced cabbage, carrots, and potatoes, vegan-friendly",
+    price: 100,
+    image: "/asset/atakiltwat.webp",
     category: "lunch",
   },
   {
     id: 4,
-    name: "Seafood Pasta",
-    description: "Linguine with shrimp, mussels, and clams in a light tomato sauce",
-    price: 24.99,
-    image: "/placeholder.svg?height=300&width=400",
+    name: "Tibs",
+    description: "Sautéed beef or lamb cubes with onions, peppers, and spices",
+    price: 250,
+    image: "/asset/10.jpg",
     category: "dinner",
   },
   {
-    id: 5,
-    name: "Eggs Benedict",
-    description: "Poached eggs on English muffin with hollandaise sauce",
-    price: 15.99,
-    image: "/placeholder.svg?height=300&width=400",
-    category: "breakfast",
+    id: 6,
+    name: "Kitfo",
+    description: "Minced raw or lightly cooked beef seasoned with mitmita and spiced butter",
+    price: 300,
+    image: "/asset/Kitfo.jpg",
+    category: "dinner",
   },
   {
-    id: 6,
-    name: "Avocado Toast",
-    description: "Sourdough bread with smashed avocado, poached egg, and microgreens",
-    price: 14.99,
-    image: "/placeholder.svg?height=300&width=400",
-    category: "breakfast",
+    id: 14,
+    name: "Dulet",
+    description: "Finely chopped tripe, liver, and beef with spices, onions, and chili",
+    price: 160,
+    image: "/asset/dulet.jpg",
+    category: "dinner",
   },
 ]
+
 
 export default function MenuSection() {
   const [category, setCategory] = useState("lunch")
@@ -160,7 +187,7 @@ export default function MenuSection() {
               <MenuCard>
                 <Box sx={{ position: "relative" }}>
                   <CardMedia component="img" height="220" image={item.image} alt={item.name} sx={{ borderRadius: 2 }} />
-                  <PriceTag>${item.price.toFixed(2)}</PriceTag>
+                  <PriceTag>{item.price.toFixed(2)} birr</PriceTag>
                 </Box>
                 <CardContent sx={{ px: 0 }}>
                   <MenuItemTitle variant="h6">{item.name}</MenuItemTitle>

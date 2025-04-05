@@ -51,7 +51,7 @@ export default function MenuHero() {
   return (
     <HeroContainer
       sx={{
-        backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
+        backgroundImage: "url('/asset/bg-intro-05.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

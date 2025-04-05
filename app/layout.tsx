@@ -7,8 +7,8 @@ import ThemeRegistry from "./components/layout/ThemeRegistry"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Pato Restaurant - Fine Dining Experience",
-  description: "Welcome to Pato Restaurant, where culinary excellence meets elegant atmosphere",
+  title: "Leoul Bar &  Restaurant - Fine Dining Experience",
+  description: "Welcome to LEOUL Bar &  Restaurant, where culinary excellence meets elegant atmosphere",
 }
 
 export default function RootLayout({

@@ -52,25 +52,25 @@ interface Special {
 }
 
 const specials: Special[] = [
-  {
-    id: 1,
-    name: "Osso Buco alla Milanese",
-    description:
-      "Slow-braised veal shanks with gremolata, served with saffron risotto. A traditional Milanese specialty that showcases the rich flavors of Italian cuisine.",
-    price: 32.99,
-    image: "/placeholder.svg?height=400&width=600",
-    chef: "Chef Antonio Rossi",
-  },
-  {
-    id: 2,
-    name: "Branzino al Forno",
-    description:
-      "Whole Mediterranean sea bass baked with herbs, lemon, and olive oil. Served with roasted seasonal vegetables and a light white wine sauce.",
-    price: 29.99,
-    image: "/placeholder.svg?height=400&width=600",
-    chef: "Chef Maria Bianchi",
-  },
-]
+    {
+      id: 1,
+      name: "Doro Wat",
+      description:
+        "A rich, spicy chicken stew simmered with berbere spices, onions, and butter, served atop injera with a boiled egg. The quintessential Ethiopian comfort dish.",
+      price: 500,
+      image: "/asset/dorowat1.jpg",
+      chef: "Chef Selam Abebe",
+    },
+    {
+      id: 2,
+      name: "Kitfo",
+      description:
+        "Finely minced raw beef seasoned with mitmita and niter kibbeh (spiced clarified butter), accompanied by injera and ayibe cheese. A bold delicacy for adventurous eaters.",
+      price: 400,
+      image: "/asset/Kitfo.jpg",
+      chef: "Chef Tadesse Lemma",
+    },
+  ];
 
 export default function ChefsSpecial() {
   return (
@@ -109,7 +109,7 @@ export default function ChefsSpecial() {
                   <Typography variant="subtitle2" color="primary" sx={{ fontStyle: "italic" }}>
                     Created by {special.chef}
                   </Typography>
-                  <SpecialPrice>${special.price.toFixed(2)}</SpecialPrice>
+                  <SpecialPrice>ETB {special.price.toFixed(2)}</SpecialPrice>
                 </SpecialContent>
               </SpecialCard>
             </Box>

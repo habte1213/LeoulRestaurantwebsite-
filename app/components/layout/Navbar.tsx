@@ -1,5 +1,5 @@
-"use client"
-import * as React from "react"
+"use client";
+import * as React from "react";
 import {
   AppBar,
   Box,
@@ -15,12 +15,12 @@ import {
   Stack,
   Theme,
   SxProps,
-} from "@mui/material"
-import { Menu as MenuIcon } from "@mui/icons-material"
-import { useTheme } from "@mui/material/styles"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Instagram, Facebook, Twitter } from "@mui/icons-material"
+} from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Instagram, Facebook, Twitter } from "@mui/icons-material";
 
 interface AppBarProps {
   elevation?: number;
@@ -30,7 +30,7 @@ interface AppBarProps {
 
 const navLinks = [
   { href: "/", text: "HOME" },
-  { href: "/MenuPage", text: "MENU" },
+  { href: "/menu", text: "MENU" },
   { href: "/reservation", text: "RESERVATION" },
   { href: "/gallery", text: "GALLERY" },
   { href: "/about", text: "ABOUT" },
@@ -57,18 +57,20 @@ function ElevationScroll(props: { children: React.ReactElement<AppBarProps> }) {
 }
 
 export default function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
-  const pathname = usePathname()
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const pathname = usePathname();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget)
-  }
+    setAnchorElNav(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
+    setAnchorElNav(null);
+  };
 
   return (
     <ElevationScroll>
@@ -110,7 +112,7 @@ export default function Header() {
                     letterSpacing: "0.1em",
                     textAlign: "center",
                     lineHeight: 1.2,
-                    color:"#ec1d25"
+                    color: "#ec1d25",
                   }}
                 >
                   LEOUL
@@ -161,8 +163,8 @@ export default function Header() {
                 }}
               >
                 {navLinks.map((link) => (
-                  <MenuItem 
-                    key={link.href} 
+                  <MenuItem
+                    key={link.href}
                     onClick={handleCloseNavMenu}
                     component={Link}
                     href={link.href}
@@ -178,6 +180,36 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
+              component="span"
+              sx={{
+                flexGrow: 1,
+                mr: 10,
+                display: { xs: "", md: "none" },
+
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textAlign: "center",
+                lineHeight: 1.2,
+                color: "#ec1d25",
+              }}
+            >
+              LEOUL
+              <br />
+              <Typography
+                component="span"
+                variant="caption"
+                sx={{
+                  letterSpacing: "0.2em",
+                  fontSize: "0.6rem",
+                  display: "block",
+                }}
+              >
+                BAR &RESTAURANT
+              </Typography>
+            </Typography>
+            {/* <Typography
+              variant="h5"
+              noWrap
               component={Link}
               href="/"
               sx={{
@@ -191,7 +223,7 @@ export default function Header() {
               }}
             >
               LEOUL BAR &RESTAURANT 
-            </Typography>
+            </Typography> */}
 
             {/* Desktop menu */}
             <Stack
@@ -250,5 +282,5 @@ export default function Header() {
         </Container>
       </AppBar>
     </ElevationScroll>
-  )
+  );
 }

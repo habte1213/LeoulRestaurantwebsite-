@@ -59,41 +59,70 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "John Doe",
-    role: "Food Enthusiast",
-    quote: "The atmosphere and food were just outstanding. I had the best steak I've ever eaten in my life!",
-    avatar: "/placeholder.svg?height=100&width=100",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    role: "Food Blogger",
-    quote:
-      "Pato's attention to detail is evident in every dish. The flavors are perfectly balanced and everything is so fresh.",
-    avatar: "/placeholder.svg?height=100&width=100",
-    rating: 4,
-  },
-  {
-    id: 3,
-    name: "Michael Johnson",
-    role: "Restaurant Critic",
-    quote: "A truly authentic culinary experience. The chef's creativity shines through in every bite.",
-    avatar: "/placeholder.svg?height=100&width=100",
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: "Emily Wilson",
-    role: "Regular Customer",
-    quote:
-      "I've been coming here for years and the quality has never wavered. Consistently excellent service and food.",
-    avatar: "/placeholder.svg?height=100&width=100",
-    rating: 5,
-  },
-]
+    {
+      id: 1,
+      name: "Abebe Kebede",
+      role: "Food Enthusiast",
+      quote: "The atmosphere and food were outstanding. " +
+            "Best steak I've ever had in my life!",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Selamawit Assefa",
+      role: "Food Blogger",
+      quote: "Pato's attention to detail shines in every dish. " +
+            "Perfectly balanced flavors, incredibly fresh!",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 4,
+    },
+    {
+      id: 3,
+      name: "Tewodros Getachew",
+      role: "Restaurant Critic",
+      quote: "A truly authentic culinary experience. " +
+            "Chef's creativity shines in every bite.",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Alemnesh Gebre",
+      role: "Regular Customer",
+      quote: "Years of visits, never disappointed. " +
+            "Consistent excellence in service and food.",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Dawit Mekonnen",
+      role: "Executive Chef",
+      quote: "Their cooking techniques impress me deeply. " +
+            "Top-quality ingredients, flawless presentation.",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    },
+    {
+      id: 6,
+      name: "Yordanos Tadesse",
+      role: "Hospitality Consultant",
+      quote: "Service sets a gold standard. Attentive staff, " +
+            "perfect ambiance for any occasion.",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    },
+    {
+      id: 7,
+      name: "Mikias Wolde",
+      role: "Sommelier",
+      quote: "Exceptional wine pairing selections. " +
+            "Their list complements dishes beautifully.",
+      avatar: "/placeholder.svg?height=100&width=100",
+      rating: 5,
+    }
+  ];
 
 export default function TestimonialsSection() {
   const settings = {

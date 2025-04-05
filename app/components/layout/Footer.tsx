@@ -1,14 +1,32 @@
-"use client"
-import { Box, Container, Typography, TextField, Button, Link, IconButton, Divider, Stack } from "@mui/material"
-import { styled } from "@mui/material/styles"
-import { Facebook, Instagram, Twitter, LinkedIn, LocationOn, Phone, Email } from "@mui/icons-material"
+"use client";
+import {
+  Box,
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Link,
+  IconButton,
+  Divider,
+  Stack,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  LinkedIn,
+  LocationOn,
+  Phone,
+  Email,
+} from "@mui/icons-material";
 
 const FooterContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#222",
   color: "#fff",
   paddingTop: theme.spacing(8),
   paddingBottom: theme.spacing(4),
-}))
+}));
 
 const FooterTitle = styled(Typography)(({ theme }) => ({
   fontSize: "1.5rem",
@@ -26,7 +44,7 @@ const FooterTitle = styled(Typography)(({ theme }) => ({
     height: 2,
     backgroundColor: theme.palette.primary.main,
   },
-}))
+}));
 
 const FooterLink = styled(Link)(({ theme }) => ({
   color: "rgba(255, 255, 255, 0.7)",
@@ -37,13 +55,13 @@ const FooterLink = styled(Link)(({ theme }) => ({
   "&:hover": {
     color: theme.palette.primary.main,
   },
-}))
+}));
 
 const ContactItem = styled(Box)(({ theme }) => ({
   display: "flex",
   marginBottom: theme.spacing(2),
   alignItems: "flex-start",
-}))
+}));
 
 const SocialButton = styled(IconButton)(({ theme }) => ({
   color: "#fff",
@@ -54,19 +72,28 @@ const SocialButton = styled(IconButton)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     transform: "translateY(-3px)",
   },
-}))
+}));
 
 export default function Footer() {
   return (
     <FooterContainer>
       <Container maxWidth="lg">
-        <Stack direction={{ xs: "column", md: "row" }} spacing={4} justifyContent="space-between">
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={4}
+          justifyContent="space-between"
+        >
           <Box sx={{ width: { xs: "100%", md: "25%" } }}>
-          <FooterTitle variant="h6">ABOUT US</FooterTitle>
-<Typography variant="body2" color="rgba(255, 255, 255, 0.7)" paragraph>
-  LEOUL Bar & Restaurant blends authentic Ethiopian flavors with modern culinary excellence, 
-  offering a unique dining experience in a warm and welcoming atmosphere.
-</Typography>
+            <FooterTitle variant="h6">ABOUT US</FooterTitle>
+            <Typography
+              variant="body2"
+              color="rgba(255, 255, 255, 0.7)"
+              paragraph
+            >
+              LEOUL Bar & Restaurant blends authentic Ethiopian flavors with
+              modern culinary excellence, offering a unique dining experience in
+              a warm and welcoming atmosphere.
+            </Typography>
 
             <Box sx={{ mt: 3 }}>
               <SocialButton aria-label="Facebook">
@@ -85,39 +112,52 @@ export default function Footer() {
           </Box>
 
           <Box sx={{ width: { xs: "100%", md: "25%" } }}>
-            <FooterTitle variant="h6">OPENING HOURS</FooterTitle>
-            <Typography variant="body2" color="rgba(255, 255, 255, 0.7)" sx={{ mb: 1 }}>
-              <strong>Monday-Friday</strong>
-            </Typography>
-            <Typography variant="body2" color="rgba(255, 255, 255, 0.7)" sx={{ mb: 2 }}>
-              9:00 AM - 10:00 PM
-            </Typography>
-            <Typography variant="body2" color="rgba(255, 255, 255, 0.7)" sx={{ mb: 1 }}>
-              <strong>Saturday-Sunday</strong>
-            </Typography>
-            <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-              10:00 AM - 11:00 PM
-            </Typography>
-          </Box>
+  <FooterTitle variant="h6">OPENING HOURS</FooterTitle>
+  <Typography
+    variant="body2"
+    color="rgba(255, 255, 255, 0.7)"
+    sx={{ mb: 1 }}
+  >
+    <strong>Monday-Friday</strong> {/* Monday - Friday in Ethiopian week names */}
+  </Typography>
+  <Typography
+    variant="body2"
+    color="rgba(255, 255, 255, 0.7)"
+    sx={{ mb: 2 }}
+  >
+    12:00 Morning - 4:00 Night (Ethiopian Time)
+  </Typography>
+  <Typography
+    variant="body2"
+    color="rgba(255, 255, 255, 0.7)"
+    sx={{ mb: 1 }}
+  >
+    <strong>Saturday-Sunday</strong> {/* Saturday - Sunday */}
+  </Typography>
+  <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
+    12:00 Morning - 5:00 Night (Ethiopian Time)
+  </Typography>
+</Box>
+
 
           <Box sx={{ width: { xs: "100%", md: "25%" } }}>
             <FooterTitle variant="h6">CONTACT US</FooterTitle>
             <ContactItem>
               <LocationOn sx={{ color: "primary.main", mr: 2, mt: 0.5 }} />
               <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-                123 Main Street, New York, NY 10001
+                Gotera condominium, Addis Ababa
               </Typography>
             </ContactItem>
             <ContactItem>
               <Phone sx={{ color: "primary.main", mr: 2, mt: 0.5 }} />
               <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-                +1 (555) 123-4567
+                +2511123456789
               </Typography>
             </ContactItem>
             <ContactItem>
               <Email sx={{ color: "primary.main", mr: 2, mt: 0.5 }} />
               <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-                info@patorestaurant.com
+                info@leoulrestaurant.com
               </Typography>
             </ContactItem>
           </Box>
@@ -156,11 +196,15 @@ export default function Footer() {
           </Box> */}
         </Stack>
         <Divider sx={{ my: 4, borderColor: "rgba(255, 255, 255, 0.1)" }} />
-        <Typography variant="body2" color="rgba(255, 255, 255, 0.5)" align="center">
-          © {new Date().getFullYear()} LEOUL BAR & RESTAURANT . All rights reserved.
+        <Typography
+          variant="body2"
+          color="rgba(255, 255, 255, 0.5)"
+          align="center"
+        >
+          © {new Date().getFullYear()} LEOUL BAR & RESTAURANT . All rights
+          reserved.
         </Typography>
       </Container>
     </FooterContainer>
-  )
+  );
 }
-
